@@ -20,5 +20,5 @@ echo "values from 1st index of MyArray is: ${MyArray[*]:1}"
 echo "3 values from 2nd index of MyArray is: ${MyArray[*]:2:3}"
 
 #How to update an array with new values
-MyArray+=("IND_Bank" "BlackRock")
+MyArray+=("India" "Delhi" 3.14 55)
 echo "MyArray with new elements: ${MyArray[*]}"
