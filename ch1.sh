@@ -84,10 +84,16 @@ mkdir bpl && mkdir bpl/script
 
 : '2. Write a script to create the “Hello, World!” script, hw, in $HOME/
 bpl/bin/; make it executable; and then execute it.'
-
-
+#!/bin/bash
+cd $HOME/bpl/bin
+echo echo Hello , World! > hw
+chmod +x hw
+hw
 
 
 : ' 3. Make the modifications to now enable running the script using 
 the command hw instead of /bpl/bin/hw from the user home 
 directory.'
+#!/bin/bash
+PATH = $PATH :$HOME/bpl/bin
+echo Sucess
