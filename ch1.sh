@@ -1,5 +1,5 @@
 #!/bin/bash
-# Chapter 1: Basics 
+# Chapter 1: Basics Of Shell Script Commands
 
 # A shell script is a file that contains one or more commands
 
