@@ -11,7 +11,7 @@ int arrayTOsum[ARRAY_SIZE];
 pthread_t thread_ids[NUM_THREADS];
 
 void *threadSumFunc_0(void *arg){
-    int thread_id = *((int *) arg); //***  yaha void pointer ko int pointer karke de-reference kar rahe hai
+    int thread_id = *((int *) arg); 
     int start = thread_id * (ARRAY_SIZE / NUM_THREADS); // 0-19
     int end = start + (ARRAY_SIZE / NUM_THREADS) - 1;
     // printf("Thread ID: %d, Start: %d, End: %d\n", thread_id, start, end);
@@ -61,7 +61,6 @@ int main() {
     for (int i = 1; i < NUM_THREADS; i++) {
         thread_args[i] = i;
         pthread_create(&thread_ids[i], NULL, threadSumFunc, (void *) &thread_args[i]);
-        //create threads form 1 to 4
     }
 
     thread_args[0] = 0;

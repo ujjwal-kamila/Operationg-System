@@ -12,7 +12,7 @@ void sig_handler(int sig){
 
     if (count == 6){
         printf("wake up ooga booga\n");
-        sigaction(SIGALRM, &oldaction, NULL);
+        sigaction(SIGALRM , &oldaction, NULL);
     }
     alarm(1);
 }
@@ -21,7 +21,7 @@ int main(){
     struct sigaction sa;
 
     sa.sa_handler = &sig_handler;
-    sigaction(SIGALRM, &sa, &oldaction);
+    sigaction(SIGALRM , &sa, &oldaction);
 
     alarm(1);
     while(1){
