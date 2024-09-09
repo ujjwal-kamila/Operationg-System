@@ -18,6 +18,7 @@ int main (){
         printf("My Parent's pid is %d\n",getppid());
     }
     
+    //parent process
     else{
         printf("Parent having pid %d\n",getpid());
         printf("My child's pid %d\n",q);
